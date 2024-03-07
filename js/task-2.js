@@ -32,11 +32,13 @@ const gallery = document.querySelector('.gallery');
 const fragment = document.createDocumentFragment();
 
 
-images.forEach((image) => {
+images.forEach(image => {
     const li = document.createElement('li');
     const img = document.createElement('img');
     img.src = image.url;
-    img.alt = image.alt;
+  img.alt = image.alt;
+  li.classList.add('gallery-item');
+  img.classList.add('gallery-img');
     li.appendChild(img);
     fragment.appendChild(li);
 });
